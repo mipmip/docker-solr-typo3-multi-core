@@ -4,7 +4,7 @@ ENV TERM linux
 
 RUN rm -fR /opt/solr/server/solr/*
 
-COPY Resources/Private/Solr/ /opt/solr/server/solr
+#COPY Resources/Private/Solr/ /opt/solr/server/solr
 
 USER root
 
@@ -13,4 +13,4 @@ RUN mkdir -p /opt/solr/server/solr/data && \
 
 USER solr
 
-VOLUME ["/opt/solr/server/solr/data"]
+VOLUME ["/opt/solr/server/solr"]
